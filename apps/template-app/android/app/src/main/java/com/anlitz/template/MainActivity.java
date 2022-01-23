@@ -1,4 +1,4 @@
-package com.templateapp;
+package com.anlitz.template;
 
 import com.facebook.react.ReactActivity;
 
