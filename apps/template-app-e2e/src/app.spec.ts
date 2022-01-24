@@ -1,13 +1,11 @@
-import { device, element, by, expect } from 'detox'
+import { by, device, element, expect } from 'detox'
 
-describe('TemplateApp', () => {
+describe('Habit App', () => {
   beforeEach(async () => {
     await device.reloadReactNative()
   })
 
   it('should display welcome message', async () => {
-    await expect(element(by.id('heading'))).toHaveText(
-      'Welcome TemplateApp 👋'
-    )
+    await expect(element(by.text('Welcome'))).toBeVisible()
   })
 })

@@ -105,3 +105,6 @@ apps/template-app-e2e/artifacts
 .gitsecret/keys/random_seed
 !*.secret
 **/.env
+
+## E2E
+artifacts/
