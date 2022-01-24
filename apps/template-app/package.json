@@ -3,6 +3,10 @@
   "version": "0.0.1",
   "private": true,
   "dependencies": {
+    "@react-navigation/native": "*",
+    "@react-navigation/native-stack": "*",
+    "react-native-safe-area-context": "*",
+    "react-native-screens": "*",
     "@testing-library/jest-native": "*",
     "@testing-library/react-native": "*",
     "react": "*",
