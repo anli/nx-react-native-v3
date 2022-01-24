@@ -100,3 +100,8 @@ apps/template-app-e2e/artifacts
 **/node_modules
 
 **/coverage
+
+# git secret
+.gitsecret/keys/random_seed
+!*.secret
+**/.env
