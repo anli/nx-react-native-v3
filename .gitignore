@@ -111,3 +111,6 @@ artifacts/
 
 # storybook
 **/storybook.requires.js
+
+# storybook
+**/storybook.requires.js

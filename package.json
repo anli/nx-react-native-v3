@@ -76,6 +76,8 @@
     "@react-native-community/slider": "^4.2.0",
     "@react-navigation/native": "^6.0.6",
     "@react-navigation/native-stack": "^6.2.5",
+    "@shopify/polaris-tokens": "^4.0.0",
+    "@shopify/restyle": "^1.6.1",
     "@storybook/addon-actions": "^6.3.13",
     "@storybook/addon-controls": "^6.3.13",
     "@storybook/addon-ondevice-actions": "^6.0.1-alpha.7",

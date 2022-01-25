@@ -78,6 +78,14 @@
         "jestConfig": "apps/storybook-app/jest.config.js",
         "passWithNoTests": true
       }
+    },
+    "type-check": {
+      "executor": "@nrwl/workspace:run-commands",
+      "outputs": [],
+      "options": {
+        "command": "tsc -b",
+        "cwd": "apps/storybook-app"
+      }
     }
   },
   "tags": []
