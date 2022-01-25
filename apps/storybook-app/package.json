@@ -20,6 +20,8 @@
     "@storybook/addon-ondevice-backgrounds": "*",
     "@storybook/addon-ondevice-controls": "*",
     "@storybook/addon-ondevice-notes": "*",
-    "@storybook/react-native": "*"
+    "@storybook/react-native": "*",
+    "@shopify/restyle": "*",
+    "@shopify/polaris-tokens": "*"
   }
 }

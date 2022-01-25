@@ -1,6 +1,7 @@
 {
   "version": 2,
   "projects": {
+    "shared-ui": "libs/shared/ui",
     "storybook-app": "apps/storybook-app",
     "template-app": "apps/template-app",
     "template-app-e2e": "apps/template-app-e2e"
