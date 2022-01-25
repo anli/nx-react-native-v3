@@ -108,3 +108,6 @@ apps/template-app-e2e/artifacts
 
 ## E2E
 artifacts/
+
+# storybook
+**/storybook.requires.js
