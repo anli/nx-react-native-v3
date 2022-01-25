@@ -86,6 +86,7 @@ jobs:
           key: node-modules-${{ hashFiles('package-lock.json') }}
 
       - name: Cache Pods
+        id: cache-pods
         uses: actions/cache@v2
         with:
           path: Pods
@@ -100,6 +101,11 @@ jobs:
       - name: Install app node modules
         run: |
           npx nx ensure-symlink
+
+      - name: Install Pods
+        if: steps.cache-pods.outputs.cache-hit != 'true'
+        run: |
+          npm run pod-install -- --base=origin/$GITHUB_BASE_REF --skip-nx-cache
 
       - name: Rebuild detox
         run: |
