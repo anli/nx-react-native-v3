@@ -1,6 +1,6 @@
 import { by, device, element, expect } from 'detox'
 
-describe('Habit App', () => {
+describe('Template App', () => {
   beforeEach(async () => {
     await device.reloadReactNative()
   })

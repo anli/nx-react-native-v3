@@ -67,6 +67,14 @@
           "apps/template-app-e2e/**/*.{ts,tsx,js,jsx}"
         ]
       }
+    },
+    "pod-install": {
+      "executor": "@nrwl/workspace:run-commands",
+      "outputs": [],
+      "options": {
+        "command": "pod install",
+        "cwd": "apps/template-app/ios"
+      }
     }
   },
   "tags": [],
