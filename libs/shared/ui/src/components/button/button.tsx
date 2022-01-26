@@ -21,7 +21,11 @@ export const Button = ({ children, ...rest }: ButtonProps): JSX.Element => {
   const { padding, ...restStyle } = props.style.find(Boolean)
 
   return (
-    <PaperButton {...props} style={{ ...restStyle }} contentStyle={{ padding }}>
+    <PaperButton
+      uppercase={false}
+      {...props}
+      style={{ ...restStyle }}
+      contentStyle={{ padding }}>
       {children}
     </PaperButton>
   )

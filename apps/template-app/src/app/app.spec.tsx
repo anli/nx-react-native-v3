@@ -4,5 +4,5 @@ import { App } from './app'
 
 test('renders correctly', () => {
   const { getByText } = render(<App />)
-  expect(getByText('Welcome')).toBeDefined()
+  expect(getByText('Text')).toBeDefined()
 })

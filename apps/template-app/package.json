@@ -18,6 +18,7 @@
     "@shopify/polaris-tokens": "*",
     "@storybook/addon-actions": "*",
     "react-native-paper": "*",
-    "react-native-typography": "*"
+    "react-native-typography": "*",
+    "@faker-js/faker": "*"
   }
 }

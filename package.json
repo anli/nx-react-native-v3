@@ -20,6 +20,7 @@
   },
   "private": true,
   "devDependencies": {
+    "@faker-js/faker": "^6.0.0-alpha.5",
     "@nrwl/cli": "13.4.6",
     "@nrwl/detox": "13.4.6",
     "@nrwl/eslint-plugin-nx": "13.4.6",
