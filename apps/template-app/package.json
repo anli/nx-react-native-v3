@@ -15,6 +15,9 @@
     "react-native-svg": "*",
     "@storybook/react-native": "*",
     "@shopify/restyle": "*",
-    "@shopify/polaris-tokens": "*"
+    "@shopify/polaris-tokens": "*",
+    "@storybook/addon-actions": "*",
+    "react-native-paper": "*",
+    "react-native-typography": "*"
   }
 }

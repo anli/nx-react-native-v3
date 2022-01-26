@@ -22,6 +22,8 @@
     "@storybook/addon-ondevice-notes": "*",
     "@storybook/react-native": "*",
     "@shopify/restyle": "*",
-    "@shopify/polaris-tokens": "*"
+    "@shopify/polaris-tokens": "*",
+    "react-native-paper": "*",
+    "react-native-typography": "*"
   }
 }
