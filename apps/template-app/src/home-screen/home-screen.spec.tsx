@@ -1,19 +1,7 @@
+import { mockNavigate, render } from '@nx-react-native/shared/utils-testing'
 import { fireEvent } from '@testing-library/react-native'
 import React from 'react'
-import { render } from '../utils-testing'
 import { HomeScreen } from './home-screen'
-
-const mockNavigate = jest.fn()
-jest.mock('@react-navigation/native', () => {
-  const module = jest.requireActual('@react-navigation/native')
-  return {
-    ...module,
-    useNavigation: () => ({
-      ...module.useNavigation(),
-      navigate: mockNavigate
-    })
-  }
-})
 
 describe('Home Screen', () => {
   it('Then I should see Home Screen', () => {
