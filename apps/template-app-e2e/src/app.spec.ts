@@ -5,7 +5,7 @@ describe('Template App', () => {
     await device.reloadReactNative()
   })
 
-  it('should display welcome message', async () => {
-    await expect(element(by.text('Welcome'))).toBeVisible()
+  it('Then I should see Home Screen', async () => {
+    await expect(element(by.text('Home'))).toBeVisible()
   })
 })
