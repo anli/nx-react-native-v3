@@ -6,6 +6,8 @@ import { Provider as PaperProvider } from 'react-native-paper'
 import { HomeScreen } from '../home-screen'
 import { LoginScreen } from '../login-screen'
 
+// TODO: refactor testing and mocks
+
 // eslint-disable-next-line @typescript-eslint/consistent-type-definitions
 export type RootStackParamList = {
   Home: undefined

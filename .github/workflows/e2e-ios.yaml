@@ -103,7 +103,7 @@ jobs:
           npx nx ensure-symlink
 
       - name: Install Pods
-        if: steps.cache-pods.outputs.cache-hit != 'true'
+        # if: steps.cache-pods.outputs.cache-hit != 'true'
         run: |
           npm run pod-install -- --base=origin/$GITHUB_BASE_REF --skip-nx-cache
 
