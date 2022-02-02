@@ -25,6 +25,7 @@
     "@shopify/polaris-tokens": "*",
     "react-native-paper": "*",
     "react-native-typography": "*",
-    "@faker-js/faker": "*"
+    "@faker-js/faker": "*",
+    "react-native-safe-area-context": "*"
   }
 }

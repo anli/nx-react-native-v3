@@ -19,6 +19,8 @@
     "@storybook/addon-actions": "*",
     "react-native-paper": "*",
     "react-native-typography": "*",
-    "@faker-js/faker": "*"
+    "@faker-js/faker": "*",
+    "react-native-tab-view": "*",
+    "react-native-pager-view": "*"
   }
 }
