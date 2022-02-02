@@ -4,14 +4,16 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import React from 'react'
 import { Provider as PaperProvider } from 'react-native-paper'
 import { HomeScreen } from '../home-screen'
+import { ListScreen } from '../list-screen'
 import { LoginScreen } from '../login-screen'
 
-// TODO: refactor testing and mocks
+// TODO: HEADER
 
 // eslint-disable-next-line @typescript-eslint/consistent-type-definitions
 export type RootStackParamList = {
   Home: undefined
   Login: undefined
+  List: undefined
 }
 
 const Stack = createNativeStackNavigator<RootStackParamList>()
@@ -30,6 +32,11 @@ export const App = (): React.ReactElement => (
             name="Login"
             component={LoginScreen.Component}
             options={LoginScreen.options}
+          />
+          <Stack.Screen
+            name="List"
+            component={ListScreen.Component}
+            options={ListScreen.options}
           />
         </Stack.Navigator>
       </NavigationContainer>

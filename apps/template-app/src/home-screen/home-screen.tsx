@@ -18,6 +18,10 @@ const Component = (): React.ReactElement => {
     navigation.navigate('Login')
   }
 
+  const handleList = (): void => {
+    navigation.navigate('List')
+  }
+
   return (
     <Screen testID="HomeScreen">
       <View>
@@ -32,6 +36,15 @@ const Component = (): React.ReactElement => {
           borderRadius="extraLoose"
           onPress={handleLogin}>
           Button to Login Screen
+        </Button>
+
+        <Button
+          margin="base"
+          padding="base"
+          mode="contained"
+          borderRadius="extraLoose"
+          onPress={handleList}>
+          Button to List Screen
         </Button>
       </View>
     </Screen>

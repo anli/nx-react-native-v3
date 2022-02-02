@@ -43,6 +43,7 @@ const base = {
   },
   textVariants: {
     // https://github.com/hectahertz/react-native-typography/blob/master/src/collections/iOSUIKit.js
+    // https://github.com/hectahertz/react-native-typography/blob/master/src/collections/human.js
     defaults: {
       ...iOSUIKit.bodyObject,
       color: 'text'
@@ -53,6 +54,18 @@ const base = {
     },
     body: {
       ...iOSUIKit.bodyObject,
+      color: 'text'
+    },
+    bodyEmphasized: {
+      ...iOSUIKit.bodyEmphasizedObject,
+      color: 'text'
+    },
+    title3Emphasized: {
+      ...iOSUIKit.title3EmphasizedObject,
+      color: 'text'
+    },
+    footnote: {
+      ...iOSUIKit.footnoteObject,
       color: 'text'
     }
   },

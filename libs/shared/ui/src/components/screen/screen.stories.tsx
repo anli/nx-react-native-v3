@@ -13,6 +13,4 @@ export default Meta
 
 type Story = ComponentStory<typeof Screen>
 
-export const Basic: Story = () => (
-  <Screen backgroundColor="critical" />
-)
+export const Basic: Story = () => <Screen backgroundColor="critical" />
