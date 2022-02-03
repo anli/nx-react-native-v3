@@ -1,5 +1,7 @@
+import { HeaderBackButton } from '@react-navigation/elements'
+import { useNavigation } from '@react-navigation/native'
 import React, { FC, useEffect, useRef, useState } from 'react'
-import { Animated, Platform, ViewProps } from 'react-native'
+import { Animated, Platform, StyleSheet, ViewProps } from 'react-native'
 import {
   SafeAreaProvider,
   useSafeAreaInsets
@@ -11,6 +13,8 @@ import { NavBarContext } from './use-nav-bar'
 const NAV_TITLE_HEIGHT = 44
 const NAV_BAR_Z_INDEX = 10
 const HEADER_Z_INDEX = 9
+const DEFAULT_HEADER_HEIGHT = 40
+const NAV_BAR_SIDE_WIDTH = 40
 
 const getHeaderHeightPlatformOffset = (height: number): number =>
   Platform.select({ ios: -height, default: 0 })
@@ -62,12 +66,20 @@ const AnimatedNavBar: FC<AnimatedNavBarProps> = ({
 }) => {
   const { top: paddingTop } = useSafeAreaInsets()
   const { opacity } = useAnimatedNavBar(scrollY, headerHeight)
+  const navigation = useNavigation()
 
+  /* istanbul ignore next */
   return (
     <View
+      flexDirection="row"
       backgroundColor="surface"
-      style={{ paddingTop }}
+      style={[styles.container, { paddingTop }]}
       zIndex={NAV_BAR_Z_INDEX}>
+      <View width={NAV_BAR_SIDE_WIDTH}>
+        {Boolean(navigation.canGoBack()) && (
+          <HeaderBackButton onPress={navigation.goBack} />
+        )}
+      </View>
       <View
         alignItems="center"
         justifyContent="center"
@@ -77,6 +89,7 @@ const AnimatedNavBar: FC<AnimatedNavBarProps> = ({
           <Text variant="bodyEmphasized">{title}</Text>
         </Animated.View>
       </View>
+      <View width={NAV_BAR_SIDE_WIDTH} />
     </View>
   )
 }
@@ -112,7 +125,7 @@ const AnimatedHeader: FC<AnimatedHeaderProps> = ({
       zIndex={HEADER_Z_INDEX}
       justifyContent="center"
       paddingHorizontal="loose"
-      style={[{ transform: [{ translateY }] }]}
+      style={[styles.container, { transform: [{ translateY }] }]}
       {...otherProps}>
       <Text variant="largeTitleEmphasized">{title}</Text>
     </AnimatedView>
@@ -128,7 +141,7 @@ interface NavBarScreenProps {
 export const NavBarScreen: FC<NavBarScreenProps> = ({
   children,
   title,
-  headerHeight = 41
+  headerHeight = DEFAULT_HEADER_HEIGHT
 }) => {
   const scrollY = useRef(new Animated.Value(-headerHeight)).current
 
@@ -152,3 +165,18 @@ export const NavBarScreen: FC<NavBarScreenProps> = ({
     </SafeAreaProvider>
   )
 }
+
+const styles = StyleSheet.create({
+  container: Platform.select({
+    android: {
+      elevation: 4
+    },
+    ios: {
+      shadowOpacity: 0.85,
+      shadowRadius: 0
+    },
+    default: {
+      borderBottomWidth: StyleSheet.hairlineWidth
+    }
+  })
+})
