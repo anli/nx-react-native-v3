@@ -6,23 +6,19 @@ import {
   LayoutProps,
   PositionProps,
   spacing,
-  SpacingProps,
-  VariantProps
+  SpacingProps
 } from '@shopify/restyle'
 import React from 'react'
-import { Animated } from 'react-native'
+import { IconButton as PaperIconButton } from 'react-native-paper'
 import { Theme } from '../..'
 
 export type Props = SpacingProps<Theme> &
 LayoutProps<Theme> &
 BackgroundColorProps<Theme> &
 PositionProps<Theme> &
-VariantProps<Theme, 'viewVariants'> &
-React.ComponentProps<typeof Animated.View> & {
-  children?: React.ReactNode
-}
+React.ComponentProps<typeof PaperIconButton>
 
-export const AnimatedView = createRestyleComponent<Props, Theme>(
+export const IconButton = createRestyleComponent<Props, Theme>(
   [spacing, layout, backgroundColor],
-  Animated.View
+  PaperIconButton
 )

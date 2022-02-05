@@ -22,6 +22,10 @@ const Component = (): React.ReactElement => {
     navigation.navigate('List')
   }
 
+  const handleHabitList = (): void => {
+    navigation.navigate('HabitList')
+  }
+
   return (
     <Screen testID="HomeScreen">
       <View>
@@ -45,6 +49,15 @@ const Component = (): React.ReactElement => {
           borderRadius="extraLoose"
           onPress={handleList}>
           Button to List Screen
+        </Button>
+
+        <Button
+          margin="base"
+          padding="base"
+          mode="contained"
+          borderRadius="extraLoose"
+          onPress={handleHabitList}>
+          Button to Habit List Screen
         </Button>
       </View>
     </Screen>

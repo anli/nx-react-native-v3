@@ -26,6 +26,8 @@
     "react-native-paper": "*",
     "react-native-typography": "*",
     "@faker-js/faker": "*",
-    "react-native-safe-area-context": "*"
+    "react-native-safe-area-context": "*",
+    "@react-navigation/elements": "*",
+    "react-native-screens": "*"
   }
 }

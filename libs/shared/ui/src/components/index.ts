@@ -1,4 +1,5 @@
 export * from './button'
+export * from './icon-button'
 export * from './login'
 export * from './nav-bar'
 export * from './screen'
