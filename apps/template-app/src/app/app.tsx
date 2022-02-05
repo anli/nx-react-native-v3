@@ -8,6 +8,8 @@ import { HomeScreen } from '../home-screen'
 import { ListScreen } from '../list-screen'
 import { LoginScreen } from '../login-screen'
 
+// Add card with weekday checkbox
+
 // eslint-disable-next-line @typescript-eslint/consistent-type-definitions
 export type RootStackParamList = {
   Home: undefined
