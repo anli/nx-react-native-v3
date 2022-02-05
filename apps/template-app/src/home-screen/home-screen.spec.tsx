@@ -31,4 +31,13 @@ describe('Home Screen', () => {
     expect(mockNavigate).toBeCalledTimes(1)
     expect(mockNavigate).toBeCalledWith('List')
   })
+
+  it('When I press Habit List Button, Then I should see Habit List Screen', () => {
+    const { getByText } = render(<HomeScreen.Component />)
+
+    fireEvent.press(getByText('Button to Habit List Screen'))
+
+    expect(mockNavigate).toBeCalledTimes(1)
+    expect(mockNavigate).toBeCalledWith('HabitList')
+  })
 })

@@ -4,10 +4,11 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import { useNavBar } from './use-nav-bar'
 
 export const NavBarFlatList = <T,>({
+  headerHeight,
   data,
   ...rest
-}: FlatListProps<T>): JSX.Element => {
-  const { scrollY, headerHeight } = useNavBar()
+}: { headerHeight: number } & FlatListProps<T>): JSX.Element => {
+  const { scrollY } = useNavBar()
   const { bottom: paddingBottom } = useSafeAreaInsets()
 
   const handleScroll = Animated.event(

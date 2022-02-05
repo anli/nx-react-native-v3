@@ -7,6 +7,7 @@ const pxToNumber = (px: string): number => {
 }
 
 // https://www.figma.com/file/QwZvryiWjvuE0nnBWBDUXn/Polaris-for-Admin%3A-Colors-(Community)?node-id=2989%3A136
+// https://www.figma.com/file/PJfPNssHADvRCNbbEDaXql/iOS-15-UI-Kit-for-Figma-(Community)
 const base = {
   colors: {
     border: '',
@@ -82,6 +83,16 @@ const base = {
   },
   buttonVariants: {
     defaults: {}
+  },
+  viewVariants: {
+    defaults: {},
+    elevated: {
+      shadowColor: 'text',
+      shadowOpacity: 0.2,
+      shadowOffset: { width: 0, height: 5 },
+      shadowRadius: 15,
+      elevation: 5
+    }
   }
 }
 

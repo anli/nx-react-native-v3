@@ -1,33 +1,23 @@
 import {
-  ArrayElement,
   NavBarFlatList,
   NavBarScreen,
-  Text
+  NAV_BAR_HEADER_HEIGHTS,
+  View
 } from '@nx-react-native/shared/ui'
 import React from 'react'
-
-const data = Array.from({ length: 20 }, (_, k) => ({
-  id: `${k}`,
-  title: 'This is an item'
-}))
+import { list } from '../utils'
 
 const Component = (): React.ReactElement => {
-  const renderItem = ({
-    item
-  }: {
-    item: ArrayElement<typeof data>
-  }): JSX.Element => {
-    return (
-      <Text padding="loose">
-        {item.id}. {item.title}
-      </Text>
-    )
-  }
-
   return (
-    <NavBarScreen title="Scroll up">
-      <NavBarFlatList data={data} renderItem={renderItem} />
-    </NavBarScreen>
+    <View testID="ListScreen" flex={1}>
+      <NavBarScreen headerTitle="List" navTitle="Nav Title">
+        <NavBarFlatList
+          headerHeight={NAV_BAR_HEADER_HEIGHTS.default}
+          data={list.data}
+          renderItem={list.renderItem}
+        />
+      </NavBarScreen>
+    </View>
   )
 }
 

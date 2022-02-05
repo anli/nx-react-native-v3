@@ -1,4 +1,13 @@
-import { createBox } from '@shopify/restyle'
+import {
+  createBox,
+  createRestyleComponent,
+  VariantProps
+} from '@shopify/restyle'
 import { Theme } from '../../themes'
 
-export const View = createBox<Theme>()
+const Box = createBox<Theme>()
+
+type Props = VariantProps<Theme, 'viewVariants'> &
+React.ComponentProps<typeof Box>
+
+export const View = createRestyleComponent<Props, Theme>([], Box)
